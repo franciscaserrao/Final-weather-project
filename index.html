@@ -15,24 +15,33 @@
   <body>
     <div class="weather-app">
       <header>
-        <form>
-          <input type="search" placeholder="Enter a city" required />
-          <input type="submit" value="Search" />
+        <form class="search-city">
+          <input
+            type="search"
+            placeholder="Enter a city"
+            required
+            class="search-city-input"
+          />
+          <input type="submit" value="Search" class="search-city-button" />
         </form>
         <span col-4>Today</span>
         <span col-4>Tomorrow</span>
         <span col-4>6 Days</span>
       </header>
       <main>
-        <div>
-          <p>Wednesday, 17:40</p>
-          <h1>Lisbon</h1>
-          <p>Portugal</p>
-          <h2>Scattered clouds</h2>
-          <div>☁️</div>
-          <div>18ºC</div>
-          <p>Humidity: 66%, Wind: 3.13km/h</p>
+        <div class="weather-app-data">
+          <div>
+            <p class="weather-app-date">Wednesday, 9 Nov, 17:40</p>
+            <h1 class="weather-app-city">Lisbon</h1>
+            <h3 class="weather-app-country">Portugal</h3>
+          </div>
+          <div>
+            <h2 class="weather-app-description">Sunny</h2>
+          </div>
         </div>
+        <div>☀️</div>
+        <div>18ºC</div>
+        <p>Humidity: 66%, Wind: 3.13km/h</p>
       </main>
       <footer>
         Coded by

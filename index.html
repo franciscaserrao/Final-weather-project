@@ -21,18 +21,18 @@
   <body>
     <div class="weather-app">
       <header>
-        <form class="search-city">
+        <form class="search-city" id="search-form">
           <input
             type="search"
             placeholder="Enter a city"
             required
             class="search-city-input"
+            id="search-form-input"
           />
           <input type="submit" value="Search" class="search-city-button" />
         </form>
         <div class="days">
           <span class="today">Today</span>
-          <span class="tomorrow">Tomorrow</span>
           <span class="six-days">6 Days</span>
         </div>
       </header>
@@ -40,7 +40,7 @@
         <div class="weather-app-data">
           <div>
             <p class="weather-app-date">Wednesday, 9 Nov, 17:40</p>
-            <h1 class="weather-app-city">Lisbon</h1>
+            <h1 class="weather-app-city" id="weather-app-city">Lisbon</h1>
             <p class="weather-app-country">Portugal</p>
           </div>
           <div class="weather-app-description">Sunny</div>
@@ -71,5 +71,6 @@
         >
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>

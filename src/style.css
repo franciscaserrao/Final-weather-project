@@ -93,6 +93,15 @@ main {
   font-size: 56px;
   margin-top: 25px;
   font-family: "Oswald", sans-serif;
+  display: inline-block;
+}
+
+.metric {
+  margin: 0;
+  font-weight: 400;
+  font-size: 40px;
+  margin-top: 25px;
+  font-family: "Oswald", sans-serif;
 }
 
 .fa-solid.fa-circle {

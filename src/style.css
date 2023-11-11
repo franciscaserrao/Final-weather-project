@@ -54,7 +54,6 @@ main {
 .weather-app-data {
   display: flex;
   justify-content: space-between;
-  height: 100px;
 }
 
 .weather-app-date {
@@ -75,16 +74,12 @@ main {
 }
 
 .weather-app-description {
-  margin: 0;
   font-weight: 400;
   font-size: 36px;
   width: 120px;
   height: 120px;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
+  white-space: nowrap;
 }
 
 .weather-app-temperature {
@@ -107,7 +102,6 @@ main {
 .fa-solid.fa-circle {
   color: #eb534e;
   font-size: 180px;
-  display: inline-block;
   text-align: center;
   vertical-align: middle;
   width: 350px;

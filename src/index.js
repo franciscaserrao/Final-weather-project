@@ -1,9 +1,24 @@
 function refreshWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
+  temperatureElement.innerHTML = Math.round(temperature);
+
   let cityElement = document.querySelector("#weather-app-city");
   cityElement.innerHTML = response.data.city;
-  temperatureElement.innerHTML = Math.round(temperature);
+
+  let countryElement = document.querySelector("#country");
+  countryElement.innerHTML = response.data.country;
+
+  let descriptionElement = document.querySelector("#description");
+  let description = response.data.condition.description;
+  descriptionElement.innerHTML =
+    description.charAt(0).toUpperCase() + description.slice(1);
+
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.temperature.humidity;
+
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = response.data.wind.speed;
 }
 
 function searchCity(city) {

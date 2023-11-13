@@ -107,6 +107,54 @@ main {
   width: 350px;
 }
 
+.fa-solid.fa-cloud-sun {
+  color: #b04743;
+  font-size: 180px;
+  text-align: center;
+  vertical-align: middle;
+  width: 350px;
+}
+
+.fa-solid.fa-cloud {
+  color: rgb(130, 74, 76);
+  font-size: 180px;
+  text-align: center;
+  vertical-align: middle;
+  width: 350px;
+}
+
+.fa-solid.fa-smog {
+  color: #8a8f9e;
+  font-size: 180px;
+  text-align: center;
+  vertical-align: middle;
+  width: 350px;
+}
+
+.fa-solid.fa-cloud-rain {
+  color: #233847;
+  font-size: 180px;
+  text-align: center;
+  vertical-align: middle;
+  width: 350px;
+}
+
+.fa-solid.fa-cloud-bolt {
+  color: black;
+  font-size: 180px;
+  text-align: center;
+  vertical-align: middle;
+  width: 350px;
+}
+
+.fa-regular.fa-snowflake {
+  color: #8eafc6;
+  font-size: 180px;
+  text-align: center;
+  vertical-align: middle;
+  width: 350px;
+}
+
 .weather-app-details {
   font-size: 14px;
 }

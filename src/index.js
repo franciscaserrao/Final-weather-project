@@ -23,6 +23,42 @@ function refreshWeather(response) {
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
   timeElement.innerHTML = formatDate(date);
+
+  let iconElement = document.querySelector("#icon");
+  if (description === "clear sky") {
+    iconElement.innerHTML = "<i class='fa-solid fa-circle'></i>";
+  } else if (
+    description === "few clouds" ||
+    description === "scattered clouds"
+  ) {
+    iconElement.innerHTML = "<i class='fa-solid fa-cloud-sun'></i>";
+  } else if (
+    description === "broken clouds" ||
+    description === "overcast clouds"
+  ) {
+    iconElement.innerHTML = "<i class='fa-solid fa-cloud'></i>";
+  } else if (
+    description === "mist" ||
+    description === "haze" ||
+    description === "fog"
+  ) {
+    iconElement.innerHTML = "<i class='fa-solid fa-smog'></i>";
+  } else if (
+    description === "rain" ||
+    description === "light rain" ||
+    description === "moderate rain" ||
+    description === "heavy rain" ||
+    description === "shower rain"
+  ) {
+    iconElement.innerHTML = "<i class='fa-solid fa-cloud-rain'></i>";
+  } else if (
+    description === "thunderstorm" ||
+    description === "thunderstorm with light rain"
+  ) {
+    iconElement.innerHTML = "<i class='fa-solid fa-cloud-bolt'></i>";
+  } else if (description === "snow") {
+    iconElement.innerHTML = "<i class='fa-regular fa-snowflake'></i>";
+  }
 }
 
 function formatDate(date) {

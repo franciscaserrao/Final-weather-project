@@ -19,9 +19,9 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
-  <body>
-    <div class="weather-app">
-      <header>
+  <body id="body">
+    <div class="weather-app" id="background">
+      <header id="header">
         <form class="search-city" id="search-form">
           <input
             type="search"
@@ -30,9 +30,14 @@
             class="search-city-input"
             id="search-form-input"
           />
-          <input type="submit" value="Search" class="search-city-button" />
+          <input
+            type="submit"
+            value="Search"
+            class="search-city-button"
+            id="search-city-button"
+          />
         </form>
-        <div class="days">
+        <div class="days" id="days">
           <span class="today">Today</span>
           <span class="six-days">6 Days</span>
         </div>
@@ -55,20 +60,22 @@
           <strong id="wind"></strong>km/h
         </p>
       </main>
-      <footer>
+      <footer id="footer" class="link">
         Coded by
-        <a href="https://github.com/franciscaserrao" target="_blank"
+        <a href="https://github.com/franciscaserrao" target="_blank" id="link"
           >Francisca Serrão</a
         >, is open-sourced on
         <a
           href="https://github.com/franciscaserrao/Final-weather-project"
           target="_blank"
+          id="link2"
           >GitHub</a
         >
         and hosted on
         <a
           href="https://main--weather-forecast-app-shecodes.netlify.app/"
           target="_blank"
+          id="link3"
           >Netlify</a
         >
       </footer>

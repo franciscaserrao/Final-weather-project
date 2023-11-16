@@ -25,6 +25,7 @@ function refreshWeather(response) {
   timeElement.innerHTML = formatDate(date);
 
   let iconElement = document.querySelector("#icon");
+  let image = response.data.condition.icon;
   let backgroundElement = document.querySelector("#background");
   let headerElement = document.querySelector("#header");
   let footerElement = document.querySelector("#footer");
@@ -35,8 +36,9 @@ function refreshWeather(response) {
   let linkElement2 = document.querySelector("#link2");
   let linkElement3 = document.querySelector("#link3");
 
-  if (description === "clear sky") {
-    iconElement.innerHTML = "<i class='fa-solid fa-circle'></i>";
+  if (image === "clear-sky-day") {
+    iconElement.innerHTML =
+      '<img src="image-day/clear-sky-day.png" alt="Clear Sky Day Image" id="sun">';
     backgroundElement.style.backgroundColor = `#eae4ca`;
     backgroundElement.style.color = `#1b1c1e`;
     formElement.style.backgroundColor = `#fcf5da`;
@@ -47,106 +49,251 @@ function refreshWeather(response) {
     headerElement.style.borderColor = ` #dcd6bdeb`;
     footerElement.style.borderColor = ` #dcd6bdeb`;
     footerElement.style.color = `#757575`;
-  } else if (
-    description === "few clouds" ||
-    description === "scattered clouds"
-  ) {
-    iconElement.innerHTML = "<i class='fa-solid fa-cloud-sun'></i>";
-    backgroundElement.style.backgroundColor = `#D4D9D2`;
-    backgroundElement.style.color = `#233847`;
-    formElement.style.backgroundColor = `#f1f5ef`;
-    submitElement.style.backgroundColor = `#f1f5ef`;
-    formElement.style.color = `#233847`;
-    submitElement.style.color = `#233847`;
-    daysElement.style.color = `#233847`;
-    headerElement.style.borderColor = `#f1f5ef`;
-    footerElement.style.borderColor = `#f1f5ef`;
-    footerElement.style.color = `#233847`;
-  } else if (
-    description === "broken clouds" ||
-    description === "overcast clouds"
-  ) {
-    iconElement.innerHTML = "<i class='fa-solid fa-cloud'></i>";
-    backgroundElement.style.backgroundColor = `#D4D9D2`;
-    backgroundElement.style.color = `#233847`;
-    formElement.style.backgroundColor = `#f1f5ef`;
-    submitElement.style.backgroundColor = `#f1f5ef`;
-    formElement.style.color = `#233847`;
-    submitElement.style.color = `#233847`;
-    daysElement.style.color = `#233847`;
-    headerElement.style.borderColor = `#f1f5ef`;
-    footerElement.style.borderColor = `#f1f5ef`;
-    footerElement.style.color = `#233847`;
-  } else if (
-    description === "mist" ||
-    description === "haze" ||
-    description === "fog"
-  ) {
-    iconElement.innerHTML = "<i class='fa-solid fa-smog'></i>";
-    backgroundElement.style.backgroundColor = `#9A5859`;
-    backgroundElement.style.color = `#D4D9D2`;
-    formElement.style.backgroundColor = `#AA6266`;
-    submitElement.style.backgroundColor = `#AA6266`;
-    formElement.style.color = `#D4D9D2`;
-    submitElement.style.color = `#D4D9D2`;
-    daysElement.style.color = `#D4D9D2`;
-    headerElement.style.borderColor = `#AA6266`;
-    footerElement.style.borderColor = `#AA6266`;
-    footerElement.style.color = `#D4D9D2`;
-  } else if (
-    description === "rain" ||
-    description === "light rain" ||
-    description === "moderate rain" ||
-    description === "heavy rain" ||
-    description === "shower rain"
-  ) {
-    iconElement.innerHTML = "<i class='fa-solid fa-cloud-rain'></i>";
-    backgroundElement.style.backgroundColor = `#233847`;
-    backgroundElement.style.color = `#FDEEE1`;
+    linkElement.style.color = `#757575`;
+    linkElement2.style.color = `#757575`;
+    linkElement3.style.color = `#757575`;
+  } else if (image === "clear-sky-night") {
+    iconElement.innerHTML =
+      '<img src="image-day/clear-sky-night.png" alt="Clear Sky Night Image" id="moon">';
+    backgroundElement.style.backgroundColor = `#CEC9B2`;
+    backgroundElement.style.color = `#1b1c1e`;
+    formElement.style.backgroundColor = `#ddd7be`;
+    submitElement.style.backgroundColor = `#ddd7be`;
+    formElement.style.color = `#1b1c1e`;
+    submitElement.style.color = `#1b1c1e`;
+    daysElement.style.color = `#1b1c1e`;
+    headerElement.style.borderColor = `ddd7be`;
+    footerElement.style.borderColor = `ddd7be`;
+    footerElement.style.color = `#757575`;
+    linkElement.style.color = `#757575`;
+    linkElement2.style.color = `#757575`;
+    linkElement3.style.color = `#757575`;
+  } else if (image === "few-clouds-day") {
+    iconElement.innerHTML =
+      '<img src="image-day/few-clouds-day.png" alt="Few Clouds Day Image" id="few-clouds-day">';
+    backgroundElement.style.backgroundColor = `#eae4ca`;
+    backgroundElement.style.color = `#1b1c1e`;
+    formElement.style.backgroundColor = `#fcf5da`;
+    submitElement.style.backgroundColor = `#fcf5da`;
+    formElement.style.color = `#1b1c1e`;
+    submitElement.style.color = `#1b1c1e`;
+    daysElement.style.color = `#1b1c1e`;
+    headerElement.style.borderColor = ` #dcd6bdeb`;
+    footerElement.style.borderColor = ` #dcd6bdeb`;
+    footerElement.style.color = `#757575`;
+    linkElement.style.color = `#757575`;
+    linkElement2.style.color = `#757575`;
+    linkElement3.style.color = `#757575`;
+  } else if (image === "few-clouds-night") {
+    iconElement.innerHTML =
+      '<img src="image-day/few-clouds-night.png" alt="Few Clouds Night Image" id="few-clouds-night">';
+    backgroundElement.style.backgroundColor = `#CEC9B2`;
+    backgroundElement.style.color = `#1b1c1e`;
+    formElement.style.backgroundColor = `#ddd7be`;
+    submitElement.style.backgroundColor = `#ddd7be`;
+    formElement.style.color = `#1b1c1e`;
+    submitElement.style.color = `#1b1c1e`;
+    daysElement.style.color = `#1b1c1e`;
+    headerElement.style.borderColor = `#ddd7be`;
+    footerElement.style.borderColor = `#ddd7be`;
+    footerElement.style.color = `#757575`;
+    linkElement.style.color = `#757575`;
+    linkElement2.style.color = `#757575`;
+    linkElement3.style.color = `#757575`;
+  } else if (image === "scattered-clouds-day") {
+    iconElement.innerHTML =
+      '<img src="image-day/scattered-clouds-day.png" alt="Scattered Clouds Day Image" id="scattered-clouds-day">';
+
+    backgroundElement.style.backgroundColor = `#D4D9D3`;
+    backgroundElement.style.color = `#233948`;
+    formElement.style.backgroundColor = `#E3E8E1`;
+    submitElement.style.backgroundColor = `#E3E8E1`;
+    formElement.style.color = `#233948`;
+    submitElement.style.color = `#233948`;
+    daysElement.style.color = `#233948`;
+    headerElement.style.borderColor = `#E3E8E1`;
+    footerElement.style.borderColor = `#E3E8E1`;
+    footerElement.style.color = `#233948`;
+    linkElement.style.color = `#233948`;
+    linkElement2.style.color = `#233948`;
+    linkElement3.style.color = `#233948`;
+  } else if (image === "scattered-clouds-night") {
+    iconElement.innerHTML =
+      '<img src="image-day/scattered-clouds-night.png" alt="Scattered Clouds Night Image" id="scattered-clouds-night">';
+    backgroundElement.style.backgroundColor = `#B3B7B2`;
+    backgroundElement.style.color = `#233948`;
+    formElement.style.backgroundColor = `#C4C9C3`;
+    submitElement.style.backgroundColor = `#C4C9C3`;
+    formElement.style.color = `#233948`;
+    submitElement.style.color = `#233948`;
+    daysElement.style.color = `#233948`;
+    headerElement.style.borderColor = `#C4C9C3`;
+    footerElement.style.borderColor = `#C4C9C3`;
+    footerElement.style.color = `#233948`;
+    linkElement.style.color = `#233948`;
+    linkElement2.style.color = `#233948`;
+    linkElement3.style.color = `#233948`;
+  } else if (image === "broken-clouds-day") {
+    iconElement.innerHTML =
+      '<img src="image-day/broken-clouds-day.png" alt="Broken Clouds Day Image" id="broken-clouds-day">';
+
+    backgroundElement.style.backgroundColor = `#D4D9D3`;
+    backgroundElement.style.color = `#233948`;
+    formElement.style.backgroundColor = `#E3E8E1`;
+    submitElement.style.backgroundColor = `#E3E8E1`;
+    formElement.style.color = `#233948`;
+    submitElement.style.color = `#233948`;
+    daysElement.style.color = `#233948`;
+    headerElement.style.borderColor = `#E3E8E1`;
+    footerElement.style.borderColor = `#E3E8E1`;
+    footerElement.style.color = `#233948`;
+    linkElement.style.color = `#233948`;
+    linkElement2.style.color = `#233948`;
+    linkElement3.style.color = `#233948`;
+  } else if (image === "broken-clouds-night") {
+    iconElement.innerHTML =
+      '<img src="image-day/broken-clouds-night.png" alt="Broken Clouds Night Image" id="broken-clouds-night">';
+    backgroundElement.style.backgroundColor = `#B3B7B2`;
+    backgroundElement.style.color = `#233948`;
+    formElement.style.backgroundColor = `#C4C9C3`;
+    submitElement.style.backgroundColor = `#C4C9C3`;
+    formElement.style.color = `#233948`;
+    submitElement.style.color = `#233948`;
+    daysElement.style.color = `#233948`;
+    headerElement.style.borderColor = `#C4C9C3`;
+    footerElement.style.borderColor = `#C4C9C3`;
+    footerElement.style.color = `#233948`;
+    linkElement.style.color = `#233948`;
+    linkElement2.style.color = `#233948`;
+    linkElement3.style.color = `#233948`;
+  } else if (image === "shower-rain-day" || image === "rain-day") {
+    iconElement.innerHTML =
+      '<img src="image-day/rain-day.png" alt="Rain Day Image" id="rain-day">';
+    backgroundElement.style.backgroundColor = `#45718C`;
+    backgroundElement.style.color = `#FEEEE1`;
+    formElement.style.backgroundColor = `#5287A8`;
+    submitElement.style.backgroundColor = `#5287A8`;
+    formElement.style.color = `#FEEEE1`;
+    submitElement.style.color = `#FEEEE1`;
+    daysElement.style.color = `#FEEEE1`;
+    headerElement.style.borderColor = `#5287A8`;
+    footerElement.style.borderColor = `#5287A8`;
+    footerElement.style.color = `#FEEEE1`;
+    linkElement.style.color = `#FEEEE1`;
+    linkElement2.style.color = `#FEEEE1`;
+    linkElement3.style.color = `#FEEEE1`;
+  } else if (image === "shower-rain-night" || image === "rain-night") {
+    iconElement.innerHTML =
+      '<img src="image-day/rain-night.png" alt="Rain Night Image" id="rain-night">';
+    backgroundElement.style.backgroundColor = `#233947`;
+    backgroundElement.style.color = `#FEEEE1`;
     formElement.style.backgroundColor = `#2C4856`;
     submitElement.style.backgroundColor = `#2C4856`;
-    formElement.style.color = `#FDEEE1`;
-    submitElement.style.color = `#FDEEE1`;
-    daysElement.style.color = `#FDEEE1`;
+    formElement.style.color = `#FEEEE1`;
+    submitElement.style.color = `#FEEEE1`;
+    daysElement.style.color = `#FEEEE1`;
     headerElement.style.borderColor = `#2C4856`;
     footerElement.style.borderColor = `#2C4856`;
-    footerElement.style.color = `#FDEEE1`;
-    linkElement.style.color = `#FDEEE1`;
-    linkElement2.style.color = `#FDEEE1`;
-    linkElement3.style.color = `#FDEEE1`;
-  } else if (
-    description === "thunderstorm" ||
-    description === "thunderstorm with light rain"
-  ) {
-    iconElement.innerHTML = "<i class='fa-solid fa-cloud-bolt'></i>";
-    backgroundElement.style.backgroundColor = `#1B1C1E`;
-    backgroundElement.style.color = `#EAE5CA`;
-    formElement.style.backgroundColor = `#292A2C`;
-    submitElement.style.backgroundColor = `#292A2C`;
-    formElement.style.color = `#EAE5CA`;
-    submitElement.style.color = `#EAE5CA`;
-    daysElement.style.color = `#EAE5CA`;
-    headerElement.style.borderColor = `#292A2C`;
-    footerElement.style.borderColor = `#292A2C`;
-    footerElement.style.color = `#EAE5CA`;
-    linkElement.style.color = `#EAE5CA`;
-    linkElement2.style.color = `#EAE5CA`;
-    linkElement3.style.color = `#EAE5CA`;
-  } else if (description === "snow" || description === "light snow") {
-    iconElement.innerHTML = "<i class='fa-regular fa-snowflake'></i>";
-    backgroundElement.style.backgroundColor = `#8EAFC6`;
-    backgroundElement.style.color = `#233847`;
+    footerElement.style.color = `#FEEEE1`;
+    linkElement.style.color = `#FEEEE1`;
+    linkElement2.style.color = `#FEEEE1`;
+    linkElement3.style.color = `#FEEEE1`;
+  } else if (image === "thunderstorm-day") {
+    iconElement.innerHTML =
+      '<img src="image-day/thunderstorm-day-night.png" alt="Thunderstorm Image" id="thunderstorm-day">';
+    backgroundElement.style.backgroundColor = `#45464A`;
+    backgroundElement.style.color = `#EAE4CA`;
+    formElement.style.backgroundColor = `#606166`;
+    submitElement.style.backgroundColor = `#606166`;
+    formElement.style.color = `##EAE4CA`;
+    submitElement.style.color = `#EAE4CA`;
+    daysElement.style.color = `#EAE4CA`;
+    headerElement.style.borderColor = `#606166`;
+    footerElement.style.borderColor = `#606166`;
+    footerElement.style.color = `#EAE4CA`;
+    linkElement.style.color = `#EAE4CA`;
+    linkElement2.style.color = `#EAE4CA`;
+    linkElement3.style.color = `#EAE4CA`;
+  } else if (image === "thunderstorm-night") {
+    iconElement.innerHTML =
+      '<img src="image-day/thunderstorm-day-night.png" alt="Thunderstorm Image" id="thunderstorm-night">';
+    backgroundElement.style.backgroundColor = `#292A2C`;
+    backgroundElement.style.color = `#EAE4CA`;
+    formElement.style.backgroundColor = `#45464A`;
+    submitElement.style.backgroundColor = `#45464A`;
+    formElement.style.color = `##EAE4CA`;
+    submitElement.style.color = `#EAE4CA`;
+    daysElement.style.color = `#EAE4CA`;
+    headerElement.style.borderColor = `#45464A`;
+    footerElement.style.borderColor = `#45464A`;
+    footerElement.style.color = `#EAE4CA`;
+    linkElement.style.color = `#EAE4CA`;
+    linkElement2.style.color = `#EAE4CA`;
+    linkElement3.style.color = `#EAE4CA`;
+  } else if (image === "snow-day") {
+    iconElement.innerHTML =
+      '<img src="image-day/snow-day-night.png" alt="Snow Image" id="snow-day">';
+    backgroundElement.style.backgroundColor = `#8FAFC6`;
+    backgroundElement.style.color = `#FEEDE0`;
     formElement.style.backgroundColor = `#9BBED2`;
     submitElement.style.backgroundColor = `#9BBED2`;
-    formElement.style.color = `#233847`;
-    submitElement.style.color = `#233847`;
-    daysElement.style.color = `#233847`;
+    formElement.style.color = `#FEEDE0`;
+    submitElement.style.color = `#FEEDE0`;
+    daysElement.style.color = `#FEEDE0`;
     headerElement.style.borderColor = `#9BBED2`;
     footerElement.style.borderColor = `#9BBED2`;
-    footerElement.style.color = `#233847`;
-    linkElement.style.color = `#233847`;
-    linkElement2.style.color = `#233847`;
-    linkElement3.style.color = `#233847`;
+    footerElement.style.color = `#FEEDE0`;
+    linkElement.style.color = `#FEEDE0`;
+    linkElement2.style.color = `#FEEDE0`;
+    linkElement3.style.color = `#FEEDE0`;
+  } else if (image === "snow-night") {
+    iconElement.innerHTML =
+      '<img src="image-day/snow-day-night.png" alt="Snow Image" id="snow-night">';
+    backgroundElement.style.backgroundColor = `#233947`;
+    backgroundElement.style.color = `#FEEDE0`;
+    formElement.style.backgroundColor = `#2C4856`;
+    submitElement.style.backgroundColor = `#2C4856`;
+    formElement.style.color = `#FEEDE0`;
+    submitElement.style.color = `#FEEDE0`;
+    daysElement.style.color = `#FEEDE0`;
+    headerElement.style.borderColor = `#2C4856`;
+    footerElement.style.borderColor = `#2C4856`;
+    footerElement.style.color = `#FEEDE0`;
+    linkElement.style.color = `#FEEDE0`;
+    linkElement2.style.color = `#FEEDE0`;
+    linkElement3.style.color = `#FEEDE0`;
+  } else if (image === "mist-day") {
+    iconElement.innerHTML =
+      '<img src="image-day/mist-day-night.png" alt="Mist Image" id="mist-day">';
+    backgroundElement.style.backgroundColor = `#9A585A`;
+    backgroundElement.style.color = `#D4D9D4`;
+    formElement.style.backgroundColor = `#AA6367`;
+    submitElement.style.backgroundColor = `#AA6367`;
+    formElement.style.color = `#D4D9D4`;
+    submitElement.style.color = `#D4D9D4`;
+    daysElement.style.color = `#D4D9D4`;
+    headerElement.style.borderColor = `#AA6367`;
+    footerElement.style.borderColor = `#AA6367`;
+    footerElement.style.color = `#D4D9D4`;
+    linkElement.style.color = `#D4D9D4`;
+    linkElement2.style.color = `#D4D9D4`;
+    linkElement3.style.color = `#D4D9D4`;
+  } else if (image === "mist-night") {
+    iconElement.innerHTML =
+      '<img src="image-day/mist-day-night.png" alt="Mist Image" id="mist-night">';
+    backgroundElement.style.backgroundColor = `#764344`;
+    backgroundElement.style.color = `#D4D9D4`;
+    formElement.style.backgroundColor = `#8a4f4f`;
+    submitElement.style.backgroundColor = `#8A4F4F`;
+    formElement.style.color = `#D4D9D4`;
+    submitElement.style.color = `#D4D9D4`;
+    daysElement.style.color = `#D4D9D4`;
+    headerElement.style.borderColor = `#8A4F4F`;
+    footerElement.style.borderColor = `#8A4F4F`;
+    footerElement.style.color = `#D4D9D4`;
+    linkElement.style.color = `#D4D9D4`;
+    linkElement2.style.color = `#D4D9D4`;
+    linkElement3.style.color = `#D4D9D4`;
   }
 }
 

@@ -12,7 +12,7 @@ a {
   max-width: 350px;
   margin: 30px auto;
   padding: 30px;
-  box-shadow: 0 30px 50px rgba(234, 228, 202, 0.15);
+  box-shadow: 0 30px 50px rgba(0, 0, 0);
   border-radius: 5px;
   background: #eae4ca;
 }
@@ -87,7 +87,6 @@ main {
   margin: 0;
   font-weight: 400;
   font-size: 56px;
-  margin-top: 25px;
   font-family: "Oswald", sans-serif;
   display: inline-block;
 }
@@ -100,64 +99,35 @@ main {
   font-family: "Oswald", sans-serif;
 }
 
-.fa-solid.fa-circle {
-  color: #eb534e;
-  font-size: 180px;
-  text-align: center;
-  vertical-align: middle;
-  width: 350px;
-}
-
-.fa-solid.fa-cloud-sun {
-  color: #b04743;
-  font-size: 180px;
-  text-align: center;
-  vertical-align: middle;
-  width: 350px;
-}
-
-.fa-solid.fa-cloud {
-  color: #9a5859;
-  font-size: 180px;
-  text-align: center;
-  vertical-align: middle;
-  width: 350px;
-}
-
-.fa-solid.fa-smog {
-  color: #d4d9d2;
-  font-size: 180px;
-  text-align: center;
-  vertical-align: middle;
-  width: 350px;
-}
-
-.fa-solid.fa-cloud-rain {
-  color: #8eafc6;
-  font-size: 180px;
-  text-align: center;
-  vertical-align: middle;
-  width: 350px;
-}
-
-.fa-solid.fa-cloud-bolt {
-  color: #9a5859;
-  font-size: 180px;
-  text-align: center;
-  vertical-align: middle;
-  width: 350px;
-}
-
-.fa-regular.fa-snowflake {
-  color: #fdeee1;
-  font-size: 180px;
-  text-align: center;
-  vertical-align: middle;
-  width: 350px;
-}
-
 .weather-app-details {
   font-size: 14px;
+}
+
+#sun,
+#moon,
+#scattered-clouds-day,
+#scattered-clouds-night,
+#broken-clouds-day,
+#broken-clouds-night,
+#thunderstorm-day,
+#thunderstorm-night {
+  width: 160px;
+}
+
+#few-clouds-day,
+#few-clouds-night,
+#rain-day,
+#rain-night,
+#snow-day,
+#snow-night,
+#mist-day,
+#mist-night {
+  width: 200px;
+}
+
+#icon {
+  position: static;
+  text-align: center;
 }
 
 footer {

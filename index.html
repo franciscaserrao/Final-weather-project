@@ -17,6 +17,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
     <title>Weather App</title>
   </head>
   <body id="body">
@@ -37,10 +38,6 @@
             id="search-city-button"
           />
         </form>
-        <div class="days" id="days">
-          <span class="today">Today</span>
-          <span class="six-days">6 Days</span>
-        </div>
       </header>
       <main>
         <div class="weather-app-data">
@@ -58,7 +55,21 @@
           Humidity: <strong id="humidity"></strong>%, Wind:
           <strong id="wind"></strong>km/h
         </p>
+        <div class="weather-forecast">
+          <div class="week-day">Mon</div>
+          <img
+            src="image-forecast/cloud.png"
+            alt="cloud"
+            width="36px"
+            class="img1"
+          />
+          <div class="week-temp">
+            <span class="max"><strong>18º</strong></span>
+            <span class="min">12º</span>
+          </div>
+        </div>
       </main>
+
       <footer id="footer" class="link">
         Coded by
         <a href="https://github.com/franciscaserrao" target="_blank" id="link"

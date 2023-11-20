@@ -35,6 +35,7 @@ function refreshWeather(response) {
   let linkElement = document.querySelector("#link");
   let linkElement2 = document.querySelector("#link2");
   let linkElement3 = document.querySelector("#link3");
+  let weatherForecastElement = document.querySelector(".weather-forecast");
 
   if (image === "clear-sky-day") {
     iconElement.innerHTML =
@@ -43,6 +44,7 @@ function refreshWeather(response) {
     backgroundElement.style.color = `#1b1c1e`;
     formElement.style.backgroundColor = `#fcf5da`;
     submitElement.style.backgroundColor = `#fcf5da`;
+    weatherForecastElement.style.backgroundColor = `#fcf5da`;
     formElement.style.color = `#1b1c1e`;
     submitElement.style.color = `#1b1c1e`;
     daysElement.style.color = `#1b1c1e`;
@@ -59,6 +61,7 @@ function refreshWeather(response) {
     backgroundElement.style.color = `#1b1c1e`;
     formElement.style.backgroundColor = `#ddd7be`;
     submitElement.style.backgroundColor = `#ddd7be`;
+    weatherForecastElement.style.backgroundColor = `#ddd7be`;
     formElement.style.color = `#1b1c1e`;
     submitElement.style.color = `#1b1c1e`;
     daysElement.style.color = `#1b1c1e`;
@@ -75,6 +78,7 @@ function refreshWeather(response) {
     backgroundElement.style.color = `#1b1c1e`;
     formElement.style.backgroundColor = `#fcf5da`;
     submitElement.style.backgroundColor = `#fcf5da`;
+    weatherForecastElement.style.backgroundColor = `#fcf5da`;
     formElement.style.color = `#1b1c1e`;
     submitElement.style.color = `#1b1c1e`;
     daysElement.style.color = `#1b1c1e`;
@@ -91,6 +95,7 @@ function refreshWeather(response) {
     backgroundElement.style.color = `#1b1c1e`;
     formElement.style.backgroundColor = `#ddd7be`;
     submitElement.style.backgroundColor = `#ddd7be`;
+    weatherForecastElement.style.backgroundColor = `#ddd7be`;
     formElement.style.color = `#1b1c1e`;
     submitElement.style.color = `#1b1c1e`;
     daysElement.style.color = `#1b1c1e`;
@@ -108,6 +113,7 @@ function refreshWeather(response) {
     backgroundElement.style.color = `#233948`;
     formElement.style.backgroundColor = `#E3E8E1`;
     submitElement.style.backgroundColor = `#E3E8E1`;
+    weatherForecastElement.style.backgroundColor = `#E3E8E1`;
     formElement.style.color = `#233948`;
     submitElement.style.color = `#233948`;
     daysElement.style.color = `#233948`;
@@ -124,6 +130,7 @@ function refreshWeather(response) {
     backgroundElement.style.color = `#233948`;
     formElement.style.backgroundColor = `#C4C9C3`;
     submitElement.style.backgroundColor = `#C4C9C3`;
+    weatherForecastElement.style.backgroundColor = `#C4C9C3`;
     formElement.style.color = `#233948`;
     submitElement.style.color = `#233948`;
     daysElement.style.color = `#233948`;
@@ -141,6 +148,7 @@ function refreshWeather(response) {
     backgroundElement.style.color = `#233948`;
     formElement.style.backgroundColor = `#E3E8E1`;
     submitElement.style.backgroundColor = `#E3E8E1`;
+    weatherForecastElement.style.backgroundColor = `#E3E8E1`;
     formElement.style.color = `#233948`;
     submitElement.style.color = `#233948`;
     daysElement.style.color = `#233948`;
@@ -157,6 +165,7 @@ function refreshWeather(response) {
     backgroundElement.style.color = `#233948`;
     formElement.style.backgroundColor = `#C4C9C3`;
     submitElement.style.backgroundColor = `#C4C9C3`;
+    weatherForecastElement.style.backgroundColor = `#C4C9C3`;
     formElement.style.color = `#233948`;
     submitElement.style.color = `#233948`;
     daysElement.style.color = `#233948`;
@@ -173,6 +182,7 @@ function refreshWeather(response) {
     backgroundElement.style.color = `#FEEEE1`;
     formElement.style.backgroundColor = `#5287A8`;
     submitElement.style.backgroundColor = `#5287A8`;
+    weatherForecastElement.style.backgroundColor = `#5287A8`;
     formElement.style.color = `#FEEEE1`;
     submitElement.style.color = `#FEEEE1`;
     daysElement.style.color = `#FEEEE1`;
@@ -189,6 +199,7 @@ function refreshWeather(response) {
     backgroundElement.style.color = `#FEEEE1`;
     formElement.style.backgroundColor = `#2C4856`;
     submitElement.style.backgroundColor = `#2C4856`;
+    weatherForecastElement.style.backgroundColor = `#2C4856`;
     formElement.style.color = `#FEEEE1`;
     submitElement.style.color = `#FEEEE1`;
     daysElement.style.color = `#FEEEE1`;
@@ -205,6 +216,7 @@ function refreshWeather(response) {
     backgroundElement.style.color = `#EAE4CA`;
     formElement.style.backgroundColor = `#606166`;
     submitElement.style.backgroundColor = `#606166`;
+    weatherForecastElement.style.backgroundColor = `#606166`;
     formElement.style.color = `##EAE4CA`;
     submitElement.style.color = `#EAE4CA`;
     daysElement.style.color = `#EAE4CA`;
@@ -221,6 +233,7 @@ function refreshWeather(response) {
     backgroundElement.style.color = `#EAE4CA`;
     formElement.style.backgroundColor = `#45464A`;
     submitElement.style.backgroundColor = `#45464A`;
+    weatherForecastElement.style.backgroundColor = `#45464A`;
     formElement.style.color = `##EAE4CA`;
     submitElement.style.color = `#EAE4CA`;
     daysElement.style.color = `#EAE4CA`;
@@ -237,6 +250,7 @@ function refreshWeather(response) {
     backgroundElement.style.color = `#FEEDE0`;
     formElement.style.backgroundColor = `#9BBED2`;
     submitElement.style.backgroundColor = `#9BBED2`;
+    weatherForecastElement.style.backgroundColor = `#9BBED2`;
     formElement.style.color = `#FEEDE0`;
     submitElement.style.color = `#FEEDE0`;
     daysElement.style.color = `#FEEDE0`;
@@ -253,6 +267,7 @@ function refreshWeather(response) {
     backgroundElement.style.color = `#FEEDE0`;
     formElement.style.backgroundColor = `#2C4856`;
     submitElement.style.backgroundColor = `#2C4856`;
+    weatherForecastElement.style.backgroundColor = `#2C4856`;
     formElement.style.color = `#FEEDE0`;
     submitElement.style.color = `#FEEDE0`;
     daysElement.style.color = `#FEEDE0`;
@@ -269,6 +284,7 @@ function refreshWeather(response) {
     backgroundElement.style.color = `#D4D9D4`;
     formElement.style.backgroundColor = `#AA6367`;
     submitElement.style.backgroundColor = `#AA6367`;
+    weatherForecastElement.style.backgroundColor = `#AA6367`;
     formElement.style.color = `#D4D9D4`;
     submitElement.style.color = `#D4D9D4`;
     daysElement.style.color = `#D4D9D4`;
@@ -285,6 +301,7 @@ function refreshWeather(response) {
     backgroundElement.style.color = `#D4D9D4`;
     formElement.style.backgroundColor = `#8a4f4f`;
     submitElement.style.backgroundColor = `#8A4F4F`;
+    weatherForecastElement.style.backgroundColor = `#8A4F4F`;
     formElement.style.color = `#D4D9D4`;
     submitElement.style.color = `#D4D9D4`;
     daysElement.style.color = `#D4D9D4`;
@@ -352,7 +369,26 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+  <div class="weather-forecast-day">
+  <div class="week-day">${day}</div>
+       <div class="week-image"><img src="image-forecast/cloud.png" alt="cloud" width="36px" class="img1" /></div>
+          <div class="week-temp"><span class="max"><strong>18º</strong></span><span class="min">12º</span></div>
+          </div>`;
+  });
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Lisbon");
+displayForecast();

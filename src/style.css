@@ -127,8 +127,6 @@ main {
   margin-top: 30px;
   text-align: center;
   background-color: #fcf5da;
-  display: grid;
-  grid-template-columns: 60px;
   border-radius: 5px;
   padding: 10px 5px;
 }

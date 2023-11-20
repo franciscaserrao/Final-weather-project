@@ -31,7 +31,6 @@ function refreshWeather(response) {
   let footerElement = document.querySelector("#footer");
   let formElement = document.querySelector("#search-form-input");
   let submitElement = document.querySelector("#search-city-button");
-  let daysElement = document.querySelector("#days");
   let linkElement = document.querySelector("#link");
   let linkElement2 = document.querySelector("#link2");
   let linkElement3 = document.querySelector("#link3");
@@ -47,7 +46,7 @@ function refreshWeather(response) {
     weatherForecastElement.style.backgroundColor = `#fcf5da`;
     formElement.style.color = `#1b1c1e`;
     submitElement.style.color = `#1b1c1e`;
-    daysElement.style.color = `#1b1c1e`;
+
     headerElement.style.borderColor = ` #dcd6bdeb`;
     footerElement.style.borderColor = ` #dcd6bdeb`;
     footerElement.style.color = `#757575`;
@@ -64,7 +63,7 @@ function refreshWeather(response) {
     weatherForecastElement.style.backgroundColor = `#ddd7be`;
     formElement.style.color = `#1b1c1e`;
     submitElement.style.color = `#1b1c1e`;
-    daysElement.style.color = `#1b1c1e`;
+
     headerElement.style.borderColor = `ddd7be`;
     footerElement.style.borderColor = `ddd7be`;
     footerElement.style.color = `#757575`;
@@ -81,7 +80,7 @@ function refreshWeather(response) {
     weatherForecastElement.style.backgroundColor = `#fcf5da`;
     formElement.style.color = `#1b1c1e`;
     submitElement.style.color = `#1b1c1e`;
-    daysElement.style.color = `#1b1c1e`;
+
     headerElement.style.borderColor = ` #dcd6bdeb`;
     footerElement.style.borderColor = ` #dcd6bdeb`;
     footerElement.style.color = `#757575`;
@@ -98,7 +97,7 @@ function refreshWeather(response) {
     weatherForecastElement.style.backgroundColor = `#ddd7be`;
     formElement.style.color = `#1b1c1e`;
     submitElement.style.color = `#1b1c1e`;
-    daysElement.style.color = `#1b1c1e`;
+
     headerElement.style.borderColor = `#ddd7be`;
     footerElement.style.borderColor = `#ddd7be`;
     footerElement.style.color = `#757575`;
@@ -108,7 +107,6 @@ function refreshWeather(response) {
   } else if (image === "scattered-clouds-day") {
     iconElement.innerHTML =
       '<img src="image-day/scattered-clouds-day.png" alt="Scattered Clouds Day Image" id="scattered-clouds-day">';
-
     backgroundElement.style.backgroundColor = `#D4D9D3`;
     backgroundElement.style.color = `#233948`;
     formElement.style.backgroundColor = `#E3E8E1`;
@@ -116,7 +114,7 @@ function refreshWeather(response) {
     weatherForecastElement.style.backgroundColor = `#E3E8E1`;
     formElement.style.color = `#233948`;
     submitElement.style.color = `#233948`;
-    daysElement.style.color = `#233948`;
+
     headerElement.style.borderColor = `#E3E8E1`;
     footerElement.style.borderColor = `#E3E8E1`;
     footerElement.style.color = `#233948`;
@@ -133,7 +131,7 @@ function refreshWeather(response) {
     weatherForecastElement.style.backgroundColor = `#C4C9C3`;
     formElement.style.color = `#233948`;
     submitElement.style.color = `#233948`;
-    daysElement.style.color = `#233948`;
+
     headerElement.style.borderColor = `#C4C9C3`;
     footerElement.style.borderColor = `#C4C9C3`;
     footerElement.style.color = `#233948`;
@@ -151,7 +149,7 @@ function refreshWeather(response) {
     weatherForecastElement.style.backgroundColor = `#E3E8E1`;
     formElement.style.color = `#233948`;
     submitElement.style.color = `#233948`;
-    daysElement.style.color = `#233948`;
+
     headerElement.style.borderColor = `#E3E8E1`;
     footerElement.style.borderColor = `#E3E8E1`;
     footerElement.style.color = `#233948`;
@@ -168,7 +166,7 @@ function refreshWeather(response) {
     weatherForecastElement.style.backgroundColor = `#C4C9C3`;
     formElement.style.color = `#233948`;
     submitElement.style.color = `#233948`;
-    daysElement.style.color = `#233948`;
+
     headerElement.style.borderColor = `#C4C9C3`;
     footerElement.style.borderColor = `#C4C9C3`;
     footerElement.style.color = `#233948`;
@@ -185,7 +183,7 @@ function refreshWeather(response) {
     weatherForecastElement.style.backgroundColor = `#5287A8`;
     formElement.style.color = `#FEEEE1`;
     submitElement.style.color = `#FEEEE1`;
-    daysElement.style.color = `#FEEEE1`;
+
     headerElement.style.borderColor = `#5287A8`;
     footerElement.style.borderColor = `#5287A8`;
     footerElement.style.color = `#FEEEE1`;
@@ -202,7 +200,7 @@ function refreshWeather(response) {
     weatherForecastElement.style.backgroundColor = `#2C4856`;
     formElement.style.color = `#FEEEE1`;
     submitElement.style.color = `#FEEEE1`;
-    daysElement.style.color = `#FEEEE1`;
+
     headerElement.style.borderColor = `#2C4856`;
     footerElement.style.borderColor = `#2C4856`;
     footerElement.style.color = `#FEEEE1`;
@@ -219,7 +217,7 @@ function refreshWeather(response) {
     weatherForecastElement.style.backgroundColor = `#606166`;
     formElement.style.color = `##EAE4CA`;
     submitElement.style.color = `#EAE4CA`;
-    daysElement.style.color = `#EAE4CA`;
+
     headerElement.style.borderColor = `#606166`;
     footerElement.style.borderColor = `#606166`;
     footerElement.style.color = `#EAE4CA`;
@@ -236,7 +234,7 @@ function refreshWeather(response) {
     weatherForecastElement.style.backgroundColor = `#45464A`;
     formElement.style.color = `##EAE4CA`;
     submitElement.style.color = `#EAE4CA`;
-    daysElement.style.color = `#EAE4CA`;
+
     headerElement.style.borderColor = `#45464A`;
     footerElement.style.borderColor = `#45464A`;
     footerElement.style.color = `#EAE4CA`;
@@ -253,7 +251,7 @@ function refreshWeather(response) {
     weatherForecastElement.style.backgroundColor = `#9BBED2`;
     formElement.style.color = `#FEEDE0`;
     submitElement.style.color = `#FEEDE0`;
-    daysElement.style.color = `#FEEDE0`;
+
     headerElement.style.borderColor = `#9BBED2`;
     footerElement.style.borderColor = `#9BBED2`;
     footerElement.style.color = `#FEEDE0`;
@@ -270,7 +268,7 @@ function refreshWeather(response) {
     weatherForecastElement.style.backgroundColor = `#2C4856`;
     formElement.style.color = `#FEEDE0`;
     submitElement.style.color = `#FEEDE0`;
-    daysElement.style.color = `#FEEDE0`;
+
     headerElement.style.borderColor = `#2C4856`;
     footerElement.style.borderColor = `#2C4856`;
     footerElement.style.color = `#FEEDE0`;
@@ -287,7 +285,7 @@ function refreshWeather(response) {
     weatherForecastElement.style.backgroundColor = `#AA6367`;
     formElement.style.color = `#D4D9D4`;
     submitElement.style.color = `#D4D9D4`;
-    daysElement.style.color = `#D4D9D4`;
+
     headerElement.style.borderColor = `#AA6367`;
     footerElement.style.borderColor = `#AA6367`;
     footerElement.style.color = `#D4D9D4`;
@@ -304,7 +302,7 @@ function refreshWeather(response) {
     weatherForecastElement.style.backgroundColor = `#8A4F4F`;
     formElement.style.color = `#D4D9D4`;
     submitElement.style.color = `#D4D9D4`;
-    daysElement.style.color = `#D4D9D4`;
+
     headerElement.style.borderColor = `#8A4F4F`;
     footerElement.style.borderColor = `#8A4F4F`;
     footerElement.style.color = `#D4D9D4`;
@@ -312,6 +310,8 @@ function refreshWeather(response) {
     linkElement2.style.color = `#D4D9D4`;
     linkElement3.style.color = `#D4D9D4`;
   }
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -369,7 +369,14 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "9tf8b32027ebcbc4fod15cda0efbf2e3";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
@@ -391,4 +398,3 @@ let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Lisbon");
-displayForecast();
